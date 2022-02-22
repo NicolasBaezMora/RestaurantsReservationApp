@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_app"
+    app:startDestination="@id/restaurantsFragment">
+
+    <fragment
+        android:id="@+id/restaurantsFragment"
+        android:name="com.example.restaurantreservation.fragments.RestaurantsFragment"
+        android:label="fragment_restaurants"
+        tools:layout="@layout/fragment_restaurants" >
+        <action
+            android:id="@+id/action_restaurantsFragment_to_restaurantViewFragment"
+            app:destination="@id/restaurantViewFragment" />
+        <action
+            android:id="@+id/action_restaurantsFragment_to_addRestaurantFragment"
+            app:destination="@id/addRestaurantFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/tablesReservedFragment"
+        android:name="com.example.restaurantreservation.fragments.TablesReservedFragment"
+        android:label="fragment_tables_reserved"
+        tools:layout="@layout/fragment_tables_reserved" />
+    <fragment
+        android:id="@+id/restaurantViewFragment"
+        android:name="com.example.restaurantreservation.fragments.RestaurantViewFragment"
+        android:label="fragment_restaurant_view"
+        tools:layout="@layout/fragment_restaurant_view" >
+        <action
+            android:id="@+id/action_restaurantViewFragment_to_updateRestaurantFragment"
+            app:destination="@id/updateRestaurantFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addRestaurantFragment"
+        android:name="com.example.restaurantreservation.fragments.AddRestaurantFragment"
+        android:label="fragment_add_restaurant"
+        tools:layout="@layout/fragment_add_restaurant" />
+    <fragment
+        android:id="@+id/updateRestaurantFragment"
+        android:name="com.example.restaurantreservation.fragments.UpdateRestaurantFragment"
+        android:label="fragment_update_restaurant"
+        tools:layout="@layout/fragment_update_restaurant" >
+        <action
+            android:id="@+id/action_updateRestaurantFragment_to_restaurantsFragment"
+            app:destination="@id/restaurantsFragment" />
+    </fragment>
+</navigation>

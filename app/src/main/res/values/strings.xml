@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">RestaurantReservation</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="restaurants">Restaurantes</string>
+    <string name="tablesReserved">Reservas</string>
+    <string name="do_reserve">Hacer reserva</string>
+</resources>

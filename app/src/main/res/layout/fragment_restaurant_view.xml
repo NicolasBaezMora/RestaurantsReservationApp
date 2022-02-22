@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.RestaurantViewFragment">
+
+
+    <ImageView
+        android:id="@+id/imageViewRestaurant"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toTopOf="@+id/guideLine30percent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideLine30percent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".35"/>
+
+    <TextView
+        android:id="@+id/textViewNameRestaurant"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="TEXT DEFAULT"
+        android:textStyle="bold"
+        android:textSize="23sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guideLine30percent"/>
+
+    <TextView
+        android:id="@+id/textViewDescriptionRestaurant"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="20dp"
+        android:text="TEXT DEFAULT"
+        android:textSize="19sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewNameRestaurant" />
+
+    <TextView
+        android:id="@+id/textViewAddressRestaurant"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="TEXT DEFAULT"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewDescriptionRestaurant" />
+
+
+    <Button
+        android:id="@+id/btnAddReserve"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bck_btn"
+        android:text="@string/do_reserve"
+        android:textColor="@color/black"
+        app:backgroundTint="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewBtnBack"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_margin="15dp"
+        app:cardCornerRadius="100dp"
+        app:cardElevation="0dp"
+        android:backgroundTint="@color/black_alpha"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="9dp"
+                android:src="@drawable/ic_baseline_arrow_back_24"/>
+
+        </FrameLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewBtnEdit"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_margin="15dp"
+        android:backgroundTint="@color/yellow_restaurant"
+        app:cardCornerRadius="100dp"
+        app:cardElevation="0dp"
+        app:layout_constraintBottom_toBottomOf="@id/guideLine30percent"
+        app:layout_constraintEnd_toStartOf="@+id/cardViewBtnDelete">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="9dp"
+                android:src="@drawable/ic_baseline_edit_24" />
+
+        </FrameLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewBtnDelete"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_margin="15dp"
+        android:backgroundTint="@color/yellow_restaurant"
+        app:cardCornerRadius="100dp"
+        app:cardElevation="0dp"
+        app:layout_constraintBottom_toBottomOf="@id/guideLine30percent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="9dp"
+                android:src="@drawable/ic_baseline_delete_24" />
+
+        </FrameLayout>
+
+
+    </androidx.cardview.widget.CardView>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutLoad"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/yellow_restaurant"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <com.google.android.material.progressindicator.CircularProgressIndicator
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:indicatorColor="@color/black"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
