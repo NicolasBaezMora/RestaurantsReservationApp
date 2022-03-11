@@ -14,7 +14,7 @@ class RetrofitInstance {
             .build()
 
         return Retrofit.Builder()
-            .baseUrl("http://192.168.0.7:6060/")
+            .baseUrl("https://reservation-api-ezab.herokuapp.com/")
             .client(httpClient)
             .addConverterFactory(GsonConverterFactory.create())
             .build()

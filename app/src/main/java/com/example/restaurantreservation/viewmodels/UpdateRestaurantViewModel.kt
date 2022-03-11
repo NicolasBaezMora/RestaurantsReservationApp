@@ -63,7 +63,7 @@ class UpdateRestaurantViewModel : ViewModel() {
                 retrofitInstanceServiceRestaurant.updateRestaurantImage(
                     MultipartBody.Part.createFormData(
                         "file",
-                        image!!.name,
+                        image.name,
                         RequestBody.create(MediaType.get("image/*"), image)
                     ),
                     id

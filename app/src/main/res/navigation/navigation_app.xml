@@ -12,16 +12,26 @@
         tools:layout="@layout/fragment_restaurants" >
         <action
             android:id="@+id/action_restaurantsFragment_to_restaurantViewFragment"
-            app:destination="@id/restaurantViewFragment" />
+            app:destination="@id/restaurantViewFragment"
+            app:enterAnim="@animator/nav_default_enter_anim"
+            app:exitAnim="@animator/nav_default_exit_anim"/>
         <action
             android:id="@+id/action_restaurantsFragment_to_addRestaurantFragment"
-            app:destination="@id/addRestaurantFragment" />
+            app:destination="@id/addRestaurantFragment"
+            app:enterAnim="@animator/nav_default_enter_anim"
+            app:exitAnim="@animator/nav_default_exit_anim"/>
     </fragment>
     <fragment
         android:id="@+id/tablesReservedFragment"
         android:name="com.example.restaurantreservation.fragments.TablesReservedFragment"
         android:label="fragment_tables_reserved"
-        tools:layout="@layout/fragment_tables_reserved" />
+        tools:layout="@layout/fragment_tables_reserved" >
+        <action
+            android:id="@+id/action_tablesReservedFragment_to_tableReserveViewFragment"
+            app:destination="@id/tableReserveViewFragment"
+            app:enterAnim="@animator/nav_default_enter_anim"
+            app:exitAnim="@animator/nav_default_exit_anim"/>
+    </fragment>
     <fragment
         android:id="@+id/restaurantViewFragment"
         android:name="com.example.restaurantreservation.fragments.RestaurantViewFragment"
@@ -29,7 +39,9 @@
         tools:layout="@layout/fragment_restaurant_view" >
         <action
             android:id="@+id/action_restaurantViewFragment_to_updateRestaurantFragment"
-            app:destination="@id/updateRestaurantFragment" />
+            app:destination="@id/updateRestaurantFragment"
+            app:enterAnim="@animator/nav_default_enter_anim"
+            app:exitAnim="@animator/nav_default_exit_anim"/>
     </fragment>
     <fragment
         android:id="@+id/addRestaurantFragment"
@@ -43,6 +55,13 @@
         tools:layout="@layout/fragment_update_restaurant" >
         <action
             android:id="@+id/action_updateRestaurantFragment_to_restaurantsFragment"
-            app:destination="@id/restaurantsFragment" />
+            app:destination="@id/restaurantsFragment"
+            app:enterAnim="@animator/nav_default_enter_anim"
+            app:exitAnim="@animator/nav_default_exit_anim" />
     </fragment>
+    <fragment
+        android:id="@+id/tableReserveViewFragment"
+        android:name="com.example.restaurantreservation.fragments.TableReserveViewFragment"
+        android:label="fragment_table_reserve_view"
+        tools:layout="@layout/fragment_table_reserve_view" />
 </navigation>

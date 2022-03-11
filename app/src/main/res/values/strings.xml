@@ -5,4 +5,5 @@
     <string name="restaurants">Restaurantes</string>
     <string name="tablesReserved">Reservas</string>
     <string name="do_reserve">Hacer reserva</string>
+    <string name="cancel_reserve">Cancelar Reserva</string>
 </resources>

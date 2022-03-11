@@ -4,55 +4,79 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="120dp">
+    android:layout_margin="1dp"
+    android:layout_height="200dp">
 
     <ImageView
         android:id="@+id/imageViewRestaurant"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_margin="10dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/textViewNameRestaurant"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:textSize="18sp"
-        android:maxWidth="200dp"
-        android:textStyle="bold"
-        android:text="DEFAULT TEXT"
-        app:layout_constraintStart_toEndOf="@id/imageViewRestaurant"
-        app:layout_constraintTop_toTopOf="parent"/>
-
-    <TextView
-        android:id="@+id/textViewCity"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="5dp"
-        android:text="DEFAULT TEXT"
-        app:layout_constraintTop_toBottomOf="@id/textViewNameRestaurant"
-        app:layout_constraintStart_toEndOf="@id/imageViewRestaurant"/>
-
-    <TextView
-        android:id="@+id/textViewAddress"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="5dp"
-        android:text="DEFAULT TEXT"
-        app:layout_constraintTop_toBottomOf="@id/textViewCity"
-        app:layout_constraintStart_toEndOf="@id/imageViewRestaurant"/>
-
-
-
-    <View
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="3dp"
-        android:background="@color/yellow_restaurant"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+        android:layout_height="80dp"
+        android:background="@color/black_alpha"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+
+        <TextView
+            android:id="@+id/textViewNameRestaurant"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="3dp"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:maxWidth="200dp"
+            android:maxHeight="25dp"
+            android:textStyle="bold"
+            android:text="DEFAULT TEXT"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/textViewCity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/white"
+            android:text="DEFAULT TEXT"
+            app:layout_constraintTop_toBottomOf="@id/textViewNameRestaurant"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/textViewAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:maxWidth="200dp"
+            android:maxHeight="25dp"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/white"
+            android:text="DEFAULT TEXT"
+            app:layout_constraintTop_toBottomOf="@id/textViewCity"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+        <View
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginBottom="30dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/ic_baseline_info_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
